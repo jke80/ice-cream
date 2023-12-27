@@ -1,0 +1,44 @@
+.hero__container {
+  position: relative;
+}
+
+.hero__title {
+  width: 367px;
+  color: var(--font-color);
+  font-family: var(--header-font);
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.52px;
+  text-transform: uppercase;
+}
+
+.hero_motto-container {
+  display: flex;
+}
+
+.hero__motto-text {
+  width: 200px;
+  color: var(--motto-font-color);
+  font-family: var(--motto-font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+}
+.hero__counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.hero__icecream {
+  position: absolute;
+  bottom: 0;
+  left: 636px;
+}
+.hero__dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

@@ -1,0 +1,112 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: var(--background-color);
+}
+
+.page-header__container {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.page-nav {
+  display: flex;
+}
+.logo__img {
+  width: 48px;
+}
+.site-nav {
+  display: flex;
+  gap: 28px;
+  margin-left: 308px;
+}
+.site-nav__link {
+  padding-top: 32px;
+  padding-bottom: 13px;
+  display: inline-block;
+  color: var(--font-color);
+  font-family: var(--primary-font);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: color var(--page-transition);
+  &:hover,
+  &:focus {
+    color: var(--site-accent-color);
+  }
+}
+.page-header__button-grup {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.menu-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.menu-btn__svg {
+  fill: var(--font-color);
+  // transition: fill var(--page-transition);
+  // .menu-btn:hover &,
+  // .menu-btn:focus & {
+  //   fill: var(--site-accent-color);
+  // }
+}
+.button {
+  border-radius: 10px;
+  background: var(--site-accent-color);
+}
+
+.page-header__btn {
+  padding: 12px 35px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--header-btn-color-black);
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--page-transition);
+  &:hover,
+  &:focus {
+    background-color: var(--active-color);
+  }
+  &:focus {
+    color: var(--font-color);
+  }
+  &-icon {
+    fill: currentColor;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-header__container {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .site-nav {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-header__container {
+    margin-top: 8px;
+  }
+  .logo__img {
+    width: 60px;
+  }
+}

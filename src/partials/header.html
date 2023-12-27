@@ -1,0 +1,97 @@
+<header class="page-header">
+  <div class="container page-header__container">
+    <nav class="page-nav">
+      <a href="./index.html" class="logo">
+        <picture>
+          <!-- <source
+                  srcset="
+                    ./images/photo1-270x260.webp    1x,
+                    ./images/photo1-270x260@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                /> -->
+          <source
+            srcset="
+              ./images/logo_desktop-60x65.png    1x,
+              ./images/logo_desktop-60x65@2x.png 2x
+            "
+            media="(min-width: 1200px)"
+            type="image/jpeg"
+          />
+          <!-- <source
+                  srcset="
+                    ./images/photo1-354x374.webp    1x,
+                    ./images/photo1-354x374@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                /> -->
+          <source
+            srcset="
+              ./images/logo_tablet-48x44.png    1x,
+              ./images/logo_tablet-48x44@2x.png 2x
+            "
+            media="(min-width: 480px)"
+            type="image/jpeg"
+          />
+          <!-- <source
+                  srcset="
+                    ./images/photo1-450x460.webp    1x,
+                    ./images/photo1-450x460@2x.webp 2x
+                  "
+                  type="image/webp"
+                /> -->
+          <source
+            srcset="
+              ./images/logo_mobile-40x37.png    1x,
+              ./images/logo_mobile-40x37@2x.png 2x
+            "
+            type="image/jpeg"
+          />
+          <img src="./images/logo_mobile-40x37.png" alt="Логотип" />
+        </picture>
+      </a>
+
+      <ul class="site-nav list">
+        <li>
+          <a href="#" class="link site-nav__link">Home</a>
+        </li>
+        <li>
+          <a href="#" class="link site-nav__link">How it’s made?</a>
+        </li>
+        <li>
+          <a href="#" class="link site-nav__link">Our products</a>
+        </li>
+        <li>
+          <a href="#" class="link site-nav__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-header__button-grup">
+      <button
+        type="button"
+        class="menu-btn js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="32" height="32" class="menu-btn__svg">
+          <use href="./images/symbol-defs.svg#eva_menu-fill"></use>
+        </svg>
+      </button>
+
+      <button
+        type="button"
+        class="button page-header__btn"
+        aria-expanded="false"
+        data-modal-open
+      >
+        Buy now
+        <svg width="12" height="12" class="page-header__btn-icon">
+          <use href="./images/symbol-defs.svg#ep_arrow-right-bold"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
