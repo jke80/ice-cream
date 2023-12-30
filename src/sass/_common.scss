@@ -1,9 +1,7 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
-
 body {
   font-family: var(--primary-font, sans-serif);
   color: var(--font-color);
-  letter-spacing: 0.03em;
+  //letter-spacing: 0.03em;
   background-color: var(--background-color);
 }
 
@@ -21,7 +19,7 @@ img {
 
 .link {
   @include font(14px, 500, 16px);
-  letter-spacing: 0.02em;
+  // letter-spacing: 0.02em;
   text-decoration-line: none;
 }
 

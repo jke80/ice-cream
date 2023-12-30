@@ -1,91 +1,12 @@
 <section>
   <div class="container hero__container">
-    <h1 class="hero__title">ice cream made with passion</h1>
-    <div class="hero_buttons">
-      <button type="button" class="hero__btn ptn_products">Products</button>
-      <button type="button" class="hero__btn btn_how_its_made">
-        How it’s made?
-      </button>
-    </div>
-    <div class="hero_motto-container">
-      <picture>
-        <!-- <source
-                  srcset="
-                    ./images/photo1-270x260.webp    1x,
-                    ./images/photo1-270x260@2x.webp 2x
-                  "
-                  media="(min-width: 1200px)"
-                  type="image/webp"
-                /> -->
-        <source
-          srcset="
-            ./images/many_icecream_desktop.png    1x,
-            ./images/many_icecream_desktop@2x.png 2x
-          "
-          media="(min-width: 1200px)"
-          type="image/jpeg"
-        />
-        <!-- <source
-                  srcset="
-                    ./images/photo1-354x374.webp    1x,
-                    ./images/photo1-354x374@2x.webp 2x
-                  "
-                  media="(min-width: 768px)"
-                  type="image/webp"
-                /> -->
-        <source
-          srcset="
-            ./images/many_icecream_tablet.png    1x,
-            ./images/many_icecream_tablet@2x.png 2x
-          "
-          media="(min-width: 480px)"
-          type="image/jpeg"
-        />
-
-        <img
-          src="./images/many_icecream_desktop.png"
-          alt="scoops of icecream"
-        />
-      </picture>
-      <div class="hero__motto">
-        <p class="hero__motto-text">
-          Indulge in a scoop of ice cream made with passion and treat your taste
-          buds to an unforgettable experience!
-        </p>
-        <svg width="40" height="16" class="hero__motto-arrow">
-          <use href="./images/symbol-defs.svg#Arrow"></use>
-        </svg>
-      </div>
-    </div>
-    <div class="hero__counter">
-      <p>16</p>
-      <p>cafes</p>
-      <p>23</p>
-      <p>food trucks</p>
-    </div>
-
     <picture class="hero__dots">
-      <!-- <source
-                  srcset="
-                    ./images/photo1-270x260.webp    1x,
-                    ./images/photo1-270x260@2x.webp 2x
-                  "
-                  media="(min-width: 1200px)"
-                  type="image/webp"
-                /> -->
       <source
         srcset="./images/dots_desktop.png 1x, ./images/dots_desktop@2x.png 2x"
         media="(min-width: 1200px)"
         type="image/jpeg"
       />
-      <!-- <source
-                  srcset="
-                    ./images/photo1-354x374.webp    1x,
-                    ./images/photo1-354x374@2x.webp 2x
-                  "
-                  media="(min-width: 768px)"
-                  type="image/webp"
-                /> -->
+
       <source
         srcset="./images/dots_tablet.png 1x, ./images/dots_tablet@2x.png 2x"
         media="(min-width: 768px)"
@@ -101,17 +22,30 @@
         type="image/jpeg"
       />
 
-      <img src="./images/dots_desktop.png" alt="many dots" />
+      <img src="./images/dots_mobile.png" alt="many dots" />
+    </picture>
+    <picture class="hero__many-icecreams">
+      <source
+        srcset="
+          ./images/many_icecream_desktop.png    1x,
+          ./images/many_icecream_desktop@2x.png 2x
+        "
+        media="(min-width: 1200px)"
+        type="image/jpeg"
+      />
+
+      <source
+        srcset="
+          ./images/many_icecream_tablet.png    1x,
+          ./images/many_icecream_tablet@2x.png 2x
+        "
+        media="(min-width: 480px)"
+        type="image/jpeg"
+      />
+
+      <img src="./images/many_icecream_desktop.png" alt="scoops of icecream" />
     </picture>
     <picture class="hero__icecream">
-      <!-- <source
-                  srcset="
-                    ./images/photo1-270x260.webp    1x,
-                    ./images/photo1-270x260@2x.webp 2x
-                  "
-                  media="(min-width: 1200px)"
-                  type="image/webp"
-                /> -->
       <source
         srcset="
           ./images/icecream_hero_desktop.png    1x,
@@ -120,14 +54,7 @@
         media="(min-width: 1200px)"
         type="image/jpeg"
       />
-      <!-- <source
-                  srcset="
-                    ./images/photo1-354x374.webp    1x,
-                    ./images/photo1-354x374@2x.webp 2x
-                  "
-                  media="(min-width: 768px)"
-                  type="image/webp"
-                /> -->
+
       <source
         srcset="
           ./images/icecream_hero_tablet.png    1x,
@@ -138,14 +65,50 @@
       />
       <source
         srcset="
-          ./images/icecream_hero_mobile.png    1x,
-          ./images/icecream_hero_mobile@2x.png 2x
+          ./images/icecream_hero_480.png    1x,
+          ./images/icecream_hero_480@2x.png 2x
         "
         media="(min-width: 480px)"
         type="image/jpeg"
       />
+      <source
+        srcset="
+          ./images/icecream_hero_mobile.png    1x,
+          ./images/icecream_hero_mobile@2x.png 2x
+        "
+        media="(min-width: 320px)"
+        type="image/jpeg"
+      />
 
-      <img src="./images/icecream_hero_desktop.png" alt="icecream" />
+      <img src="./images/icecream_hero_mobile.png" alt="icecream" />
     </picture>
+
+    <h1 class="hero__title">
+      ice cream made with <span class="hero__title-part">passion</span>
+    </h1>
+
+    <div class="hero__buttons">
+      <button type="button" class="hero__btn btn__products">Products</button>
+      <button type="button" class="hero__btn btn__how-its-made">
+        How it’s made?
+      </button>
+    </div>
+
+    <div class="hero__motto">
+      <p class="hero__motto-text">
+        Indulge in a scoop of ice cream made with passion and treat your taste
+        buds to an unforgettable experience!
+      </p>
+      <svg width="40" height="16" class="hero__motto-arrow">
+        <use href="./images/symbol-defs.svg#Arrow"></use>
+      </svg>
+    </div>
+
+    <div class="hero__statistic">
+      <p class="hero__statistic-count">16</p>
+      <p class="hero__statistic-text">cafes</p>
+      <p class="hero__statistic-count">23</p>
+      <p class="hero__statistic-text">food trucks</p>
+    </div>
   </div>
 </section>

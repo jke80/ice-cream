@@ -1,44 +1,228 @@
 .hero__container {
   position: relative;
+  padding-top: 50px;
 }
 
 .hero__title {
-  width: 367px;
+  margin: 0;
+  width: 247px;
   color: var(--font-color);
   font-family: var(--header-font);
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: 1.52px;
+  @include font(26px, 400, 42px);
+  //font-size: 26px;
+  //font-style: normal;
+  //font-weight: 400;
+  //line-height: normal;
+  letter-spacing: 1.04px;
+  text-transform: uppercase;
+}
+.hero__title-part {
+  @include font(34px, 400, 42px);
+  // font-size: 34px;
+  // font-style: normal;
+  // font-weight: 400;
+  line-height: 96.5%;
   text-transform: uppercase;
 }
 
-.hero_motto-container {
-  display: flex;
+.hero__buttons {
+  padding-top: 32px;
+  padding-bottom: 236px;
+}
+.hero__btn {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  line-height: normal;
+  padding: 11px 26px;
+  font-size: 12px;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.hero__motto-text {
-  width: 200px;
-  color: var(--motto-font-color);
-  font-family: var(--motto-font);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%; /* 19.6px */
+.btn__products {
+  color: var(--header-btn-color-black);
+  border: 2px solid var(--site-accent-color);
+  transition: border-color var(--page-transition);
+  &:hover {
+    border-color: var(--active-color);
+  }
 }
-.hero__counter {
+.btn__how-its-made {
+  color: var(--site-accent-color);
+  text-decoration-line: underline;
+  border: none;
+  transition: color var(--page-transition);
+  &:hover {
+    color: var(--active-color);
+  }
+  &:focus {
+    color: var(--font-color);
+  }
+}
+
+.hero__dots {
+  z-index: -1;
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
 }
 .hero__icecream {
   position: absolute;
   bottom: 0;
-  left: 636px;
+  right: 60px;
 }
-.hero__dots {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+@media screen and (min-width: 480px) {
+  .hero__container {
+    padding-top: 40px;
+  }
+
+  .hero__title {
+    width: 247px;
+  }
+
+  .hero__buttons {
+    padding-top: 32px;
+    padding-bottom: 150px;
+  }
+
+  .hero__icecream {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero__motto {
+    display: none;
+  }
+  .hero__counter {
+    display: none;
+  }
+  .hero__many-icecreams {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__container {
+    padding-top: 14px;
+  }
+
+  .hero__buttons {
+    padding-top: 24px;
+    padding-bottom: 0;
+  }
+
+  .hero__motto {
+    padding-top: 39px;
+    padding-bottom: 24px;
+    padding-left: 184px;
+  }
+
+  .hero__motto-text {
+    margin-top: 0;
+    margin-bottom: 29px;
+    width: 165px;
+    // height: 68px;
+    color: var(--motto-font-color);
+    font-family: var(--motto-font);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+  }
+
+  .hero__statistic {
+    position: absolute;
+    top: 28px;
+    right: 32px;
+    text-align: right;
+    font-family: Montserrat;
+  }
+  .hero__statistic-count {
+    margin: 0;
+    color: var(--title-font-color);
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1.12px;
+    text-transform: uppercase;
+  }
+  .hero__statistic-text {
+    margin: 4px 0px 20px 0px;
+    color: var(--font-color);
+    font-size: 8px;
+    font-weight: 400;
+  }
+
+  .hero__many-icecreams {
+    position: absolute;
+    bottom: 12px;
+    left: 32px;
+  }
+  .hero__icecream {
+    bottom: 0;
+    right: 92px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__container {
+    padding-top: 45px;
+  }
+
+  .hero__title {
+    margin: 0;
+    width: 367px;
+    color: var(--font-color);
+    font-family: var(--header-font);
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.52px;
+    text-transform: uppercase;
+  }
+
+  .hero__buttons {
+    padding-top: 28px;
+  }
+  .hero__btn {
+    padding: 12px 34px;
+    font-size: 14px;
+  }
+  .btn__products {
+    transition: color var(--page-transition),
+      border-color var(--page-transition);
+    &:focus {
+      border-color: var(--active-color);
+    }
+    &:focus {
+      color: var(--font-color);
+    }
+  }
+  .hero__motto {
+    padding-top: 109px;
+    padding-bottom: 103px;
+    padding-left: 257px;
+  }
+  .hero__motto-text {
+    margin-bottom: 24px;
+    width: 200px;
+    font-size: 14px;
+  }
+  .hero__counter {
+    top: 0;
+    right: 0;
+  }
+  .hero__many-icecreams {
+    bottom: 65px;
+    left: 16px;
+  }
+  .hero__icecream {
+    bottom: 0;
+    left: 652px;
+  }
 }

@@ -29,10 +29,11 @@
   display: inline-block;
   color: var(--font-color);
   font-family: var(--primary-font);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
+  @include font(16px, 700, 20px);
+  // font-size: 16px;
+  // font-style: normal;
+  // font-weight: 700;
+  // line-height: normal;
   transition: color var(--page-transition);
   &:hover,
   &:focus {
@@ -50,6 +51,9 @@
   background-color: transparent;
   cursor: pointer;
 }
+.page-header__btn {
+  display: none;
+}
 .menu-btn__svg {
   fill: var(--font-color);
   // transition: fill var(--page-transition);
@@ -63,35 +67,37 @@
   background: var(--site-accent-color);
 }
 
-.page-header__btn {
-  padding: 12px 35px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  color: var(--header-btn-color-black);
-  text-align: center;
-  font-family: var(--primary-font);
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  cursor: pointer;
-  border: none;
-  transition: background-color var(--page-transition);
-  &:hover,
-  &:focus {
-    background-color: var(--active-color);
-  }
-  &:focus {
-    color: var(--font-color);
-  }
-  &-icon {
-    fill: currentColor;
-  }
-}
 @media screen and (min-width: 768px) {
   .page-header__container {
     margin-top: 20px;
+  }
+  .page-header__btn {
+    padding: 12px 35px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--header-btn-color-black);
+    text-align: center;
+    font-family: var(--primary-font);
+    @include font(14px, 600, 17px);
+    // font-size: 14px;
+    // font-style: normal;
+    // font-weight: 600;
+    // line-height: normal;
+    cursor: pointer;
+    border: none;
+    transition: background-color var(--page-transition),
+      color var(--page-transition);
+    &:hover,
+    &:focus {
+      background-color: var(--active-color);
+    }
+    &:focus {
+      color: var(--font-color);
+    }
+    &-icon {
+      fill: currentColor;
+    }
   }
 }
 @media screen and (max-width: 1199px) {
