@@ -8,6 +8,7 @@
 
 .page-header__container {
   margin-top: 12px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -30,10 +31,7 @@
   color: var(--font-color);
   font-family: var(--primary-font);
   @include font(16px, 700, 20px);
-  // font-size: 16px;
-  // font-style: normal;
-  // font-weight: 700;
-  // line-height: normal;
+
   transition: color var(--page-transition);
   &:hover,
   &:focus {
@@ -56,11 +54,6 @@
 }
 .menu-btn__svg {
   fill: var(--font-color);
-  // transition: fill var(--page-transition);
-  // .menu-btn:hover &,
-  // .menu-btn:focus & {
-  //   fill: var(--site-accent-color);
-  // }
 }
 .button {
   border-radius: 10px;
@@ -80,10 +73,6 @@
     text-align: center;
     font-family: var(--primary-font);
     @include font(14px, 600, 17px);
-    // font-size: 14px;
-    // font-style: normal;
-    // font-weight: 600;
-    // line-height: normal;
     cursor: pointer;
     border: none;
     transition: background-color var(--page-transition),

@@ -1,0 +1,186 @@
+.about {
+  padding-top: 60px;
+}
+.about__lable {
+  margin: 0;
+  margin-bottom: 12px;
+  color: var(--font-color);
+  text-align: center;
+  font-family: Montserrat;
+  @include font(18px, 700, 22px);
+  text-transform: uppercase;
+}
+.about__title {
+  margin: 0 auto;
+  width: 200px;
+  color: var(--font-color);
+  text-align: center;
+  font-family: 'Seymour One';
+  @include font(30px, 400, 38px);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.about__text {
+  width: 220px;
+  color: var(--font-color);
+  text-align: center;
+  font-family: Montserrat;
+}
+.about__text1 {
+  margin: 372px auto 4px auto;
+  @include font(12px, 400, 21.12px);
+  letter-spacing: 0.48px;
+}
+.about__text2 {
+  margin: 0px auto 4px auto;
+  @include font(12px, 400, 19.44px);
+}
+.about__text3 {
+  margin: 0px auto 24px auto;
+  @include font(12px, 400, 19.44px);
+}
+.about__button {
+  margin: 0 auto;
+  border-radius: 10px;
+  background: var(--site-accent-color);
+  padding: 12px 35px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--header-btn-color-black);
+  text-align: center;
+  font-family: var(--primary-font);
+  @include font(14px, 600, 18px);
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--page-transition),
+    color var(--page-transition);
+  &:hover,
+  &:focus {
+    background-color: var(--active-color);
+  }
+  &:focus {
+    color: var(--font-color);
+  }
+  &-icon {
+    fill: currentColor;
+  }
+}
+.about__cow-pic-shadow {
+  position: absolute;
+  border-radius: 50%;
+  // border-radius: 140px;
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7) 0%,
+      rgba(248, 210, 78, 0.7) 100%
+    ),
+    #d9d9d9;
+  box-shadow: 0px 4.486px 16.822px 0px rgba(153, 114, 23, 0.25);
+  width: 279px;
+  height: 278px;
+  top: 180px;
+  right: 50%;
+  transform: translateX(50%);
+}
+.about__cow-picture {
+  position: absolute;
+  top: 202px;
+  width: 279px;
+  transform: translateX(50%);
+  right: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .about__lable {
+    @include font(22px, 800, 27px);
+    letter-spacing: 0.88px;
+  }
+  .about__title {
+    width: auto;
+    margin: 0 auto;
+    @include font(34px, 400, 43px);
+    letter-spacing: 2.04px;
+  }
+
+  .about__text {
+    text-align: left;
+    width: 334px;
+  }
+  .about__text1 {
+    margin: 80px auto 8px 368px;
+  }
+  .about__text2 {
+    margin: 0px auto 8px 368px;
+    @include font(12px, 400, 21.12px);
+  }
+  .about__text3 {
+    width: 336px;
+    margin: 0px auto 32px 368px;
+    @include font(12px, 400, 23.28px);
+  }
+  .about__button {
+    margin-left: 368px;
+  }
+
+  .about__cow-pic-shadow {
+    border-radius: 165px;
+    width: 330px;
+    height: 330px;
+    top: 154px;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .about__cow-picture {
+    width: 330px;
+    top: 180px;
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about__lable {
+    @include font(30px, 800, 37px);
+    letter-spacing: 1.2px;
+  }
+  .about__title {
+    @include font(36px, 400, 45px);
+    letter-spacing: 2.16px;
+  }
+
+  .about__text {
+    width: 463px;
+  }
+
+  .about__text1 {
+    @include font(16px, 400, 28.16px);
+    margin: 135px auto 8px 600px;
+  }
+  .about__text2 {
+    margin: 0px auto 8px 600px;
+    @include font(14px, 400, 27.16px);
+    letter-spacing: 0.56px;
+  }
+  .about__text3 {
+    margin: 0px auto 54px 600px;
+    @include font(14px, 400, 27.16px);
+    letter-spacing: 0.56px;
+  }
+  .about__button {
+    margin-left: 600px;
+  }
+
+  .about__cow-pic-shadow {
+    border-radius: 245px;
+    width: 490px;
+    height: 490px;
+    top: 176px;
+  }
+
+  .about__cow-picture {
+    width: 490px;
+    top: 215px;
+  }
+}
