@@ -1376,12 +1376,12 @@ img {
   .sections {
     background-repeat: no-repeat;
     max-width: 768px;
-    background-image: url(../images/products_background_tablet.jpg);
+    background-image: url(../images/gallery_tablet.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .sections {
-    background-image: url(../images/products_background_tablet@2x.jpg);
+    background-image: url(../images/gallery_tablet@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
