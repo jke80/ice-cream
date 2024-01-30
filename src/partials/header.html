@@ -93,5 +93,61 @@
         </svg>
       </button>
     </div>
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <a href="./index.html" class="menu-logo">
+        <picture>
+          <source
+            srcset="
+              ./images/logo_tablet-48x44.png    1x,
+              ./images/logo_tablet-48x44@2x.png 2x
+            "
+            media="(min-width: 481px)"
+            type="image/jpeg"
+          />
+
+          <source
+            srcset="
+              ./images/logo_mobile-40x37.png    1x,
+              ./images/logo_mobile-40x37@2x.png 2x
+            "
+            type="image/jpeg"
+          />
+          <img src="./images/logo_mobile-40x37.png" alt="Логотип" />
+        </picture>
+      </a>
+
+      <button type="button" class="menu-close-btn js-close-menu">
+        <svg class="menu-close-svg__btn" width="32" height="32">
+          <use href="./images/symbol-defs.svg#ep_close"></use>
+        </svg>
+      </button>
+
+      <ul class="menu-nav list">
+        <li class="menu-nav__item">
+          <a href="#" class="link menu-nav__link">Home</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="#" class="link menu-nav__link">How it’s made?</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="#" class="link menu-nav__link">Our products</a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="#" class="link menu-nav__link">Contact</a>
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="button menu__btn"
+        aria-expanded="false"
+        data-modal-open
+      >
+        Buy now
+        <svg width="12" height="12" class="page-header__btn-icon">
+          <use href="./images/symbol-defs.svg#ep_arrow-right-bold"></use>
+        </svg>
+      </button>
+    </div>
   </div>
 </header>

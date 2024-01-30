@@ -44,17 +44,26 @@
   align-items: flex-end;
 }
 .menu-btn {
-  display: none;
+  display: block;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
+
+.menu-btn__svg {
+  fill: var(--font-color);
+  transition: fill var(--page-transition);
+
+  .menu-btn:hover &,
+  .menu-btn:focus & {
+    fill: var(--site-accent-color);
+  }
+}
+
 .page-header__btn {
   display: none;
 }
-.menu-btn__svg {
-  fill: var(--font-color);
-}
+
 .button {
   border-radius: 10px;
   background: var(--site-accent-color);
@@ -93,11 +102,11 @@
   .site-nav {
     display: none;
   }
-  .menu-btn {
-    display: block;
-  }
 }
 @media screen and (min-width: 1200px) {
+  .menu-btn {
+    display: none;
+  }
   .page-header__container {
     margin-top: 8px;
   }

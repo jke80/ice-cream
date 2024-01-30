@@ -1,0 +1,117 @@
+@media screen and (max-width: 1199px) {
+  .menu-container {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 12px;
+    // padding-left: 32px;
+    z-index: 999;
+    background-color: var(--background-color);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--page-transition),
+      visibility var(--page-transition);
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+  .menu-logo {
+    display: block;
+    margin-left: 32px;
+  }
+  .menu-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .menu-close-svg__btn {
+    fill: var(--font-color);
+    transition: fill var(--page-transition);
+
+    .menu-close-btn:hover &,
+    .menu-close-btn:focus & {
+      fill: var(--site-accent-color);
+    }
+  }
+  .menu-nav {
+    padding-top: 50px;
+    padding-bottom: 110px;
+  }
+  .menu-nav__item:not(:last-child) {
+    padding-bottom: 32px;
+  }
+  .menu-nav__link {
+    @include font(32px, 700, 39px);
+    font-family: Montserrat;
+    text-decoration-line: none;
+    color: var(--font-color);
+    display: block;
+
+    &:hover,
+    &:focus {
+      color: var(--title-font-color);
+    }
+  }
+}
+.menu__btn {
+  margin: 0 auto;
+  padding: 12px 35px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--header-btn-color-black);
+  font-family: var(--primary-font);
+  @include font(14px, 600, 17px);
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--page-transition),
+    color var(--page-transition);
+  &:hover,
+  &:focus {
+    background-color: var(--active-color);
+  }
+  &:focus {
+    color: var(--font-color);
+  }
+  &-icon {
+    fill: currentColor;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .menu-nav {
+    padding-top: 40px;
+    padding-bottom: 114px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-nav {
+    padding-top: 76px;
+    padding-bottom: 0;
+  }
+  .menu-nav__item:not(:last-child) {
+    padding-bottom: 40px;
+  }
+  .menu-nav__link {
+    @include font(48px, 700, 59px);
+  }
+  .menu__btn {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    display: none;
+  }
+}
