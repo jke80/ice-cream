@@ -1357,41 +1357,105 @@ img {
   }
 }
 .sections {
-  background-color: var(--background-color);
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 480px;
-  background-image: url(../images/gallery_mobile.jpg);
-  background-repeat: repeat-y;
-  background-position: center;
-  background-size: auto;
+  background-image: url(../images/products_background_mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: top 32px center;
 }
 
+.gallery {
+  display: flex;
+  position: relative;
+  height: 130px;
+}
+
+picture:nth-child(1) img {
+  animation-delay: 0s;
+}
+
+picture:nth-child(2) img {
+  animation-delay: 3s;
+}
+
+picture:nth-child(3) img {
+  animation-delay: 6s;
+}
+
+.gallery__img {
+  border-radius: 8px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+picture .gallery__img {
+  animation: imageAnimation 9s infinite;
+}
+
+@keyframes imageAnimation {
+  0%, 100% {
+    opacity: 0;
+  }
+  3%, 33% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+}
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .sections {
-    background-image: url(../images/gallery_mobile@2x.jpg);
+    background-image: url(../images/products_background_mobile@2x.jpg);
+  }
+}
+@media screen and (min-width: 480px) {
+  .sections {
+    max-width: 480px;
+    background-position: top 49px center;
+  }
+  .gallery {
+    height: 204px;
   }
 }
 @media screen and (min-width: 768px) {
   .sections {
-    background-repeat: no-repeat;
+    background-position: top 144px center;
     max-width: 768px;
-    background-image: url(../images/gallery_tablet.jpg);
+    background-image: url(../images/products_background_tablet.jpg);
+  }
+  .gallery {
+    height: 327px;
+  }
+  .gallery__img {
+    border-radius: 18px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .sections {
-    background-image: url(../images/gallery_tablet@2x.jpg);
+    background-image: url(../images/products_background_tablet@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .sections {
     max-width: 1200px;
+    background-position: top 98px center;
     background-image: url(../images/products_background_desktop.jpg);
+  }
+  .gallery {
+    height: 422px;
+  }
+  .gallery__img {
+    border-radius: 24px;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .sections {
     background-image: url(../images/products_background_desktop@2x.jpg);
   }
+}
+.customer {
+  padding-top: 80px;
+}
+
+.customer__picture {
+  border-radius: 50%;
 }/*# sourceMappingURL=index.css.map */
