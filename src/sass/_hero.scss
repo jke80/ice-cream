@@ -36,11 +36,16 @@
 }
 
 .btn__products {
+  text-decoration: none;
   color: var(--header-btn-color-black);
   border: 2px solid var(--site-accent-color);
-  transition: border-color var(--page-transition);
+  transition: border-color, color var(--page-transition);
   &:hover {
     border-color: var(--active-color);
+  }
+  &:focus {
+    border-color: var(--active-color);
+    color: var(--font-color);
   }
 }
 .btn__how-its-made {

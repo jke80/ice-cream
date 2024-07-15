@@ -136,8 +136,19 @@
   margin-top: 40px;
   flex-grow: 1;
 }
-.products__card-arrow {
+.products__btn {
+  display: block;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.products__btn-arrow {
   fill: var(--title-font-color);
+  .products__btn:hover &,
+  .products__btn:focus & {
+    fill: var(--font-color);
+  }
 }
 
 // --------------------------480
