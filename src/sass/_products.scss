@@ -1,11 +1,11 @@
 .products {
-  background-color: var(--motto-font-color);
+  background-color: var(--background-color);
   margin-left: auto;
   margin-right: auto;
   max-width: 480px;
   background-image: url(../images/products_background_mobile.jpg);
-  background-repeat: repeat-y;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-position: top center;
   background-size: auto;
 }
 @media (min-device-pixel-ratio: 2),
@@ -35,7 +35,8 @@
   text-transform: uppercase;
 }
 .products__grid-container {
-  margin-top: 281px;
+  position: relative;
+  margin-top: 148px;
   display: grid;
   justify-items: center;
   grid-row-gap: 168px;
@@ -48,8 +49,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-width: 280px;
-  max-width: 320px;
+  width: 280px;
   height: 420px;
   padding: 123px 40px 16px 40px;
   &::before {
@@ -59,14 +59,14 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    top: -88px;
+    top: -97px;
     left: 50%;
     transform: translateX(-50%);
   }
   &::after {
     display: block;
     position: absolute;
-    top: -100px;
+    top: -108px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -142,7 +142,22 @@
 
 // --------------------------480
 @media screen and (min-width: 480px) {
+  .products {
+    background-image: url(../images/products_background_480.jpg);
+    background-position: top -20px center;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .products {
+      background-image: url(../images/products_background_480@2x.jpg);
+    }
+  }
+  .products__grid-container {
+    margin-top: 145px;
+  }
   .products__card {
+    width: 320px;
     height: 428px;
     padding: 126px 60px 16px 60px;
   }
@@ -174,7 +189,8 @@
     margin-top: 200px;
   }
   .products__card {
-    min-width: 224px;
+    width: 224px;
+    height: 428px;
     padding: 108px 26px 12px 26px;
   }
 }
@@ -182,6 +198,7 @@
 @media screen and (min-width: 1200px) {
   .products {
     max-width: 1200px;
+    background-position: top 2px center;
     background-image: url(../images/products_background_desktop.jpg);
   }
   @media (min-device-pixel-ratio: 2),
@@ -201,6 +218,7 @@
   .products__card-text {
     @include font(16px, 400, 28.16px);
     letter-spacing: 0.64px;
+    margin-top: 66px;
   }
   .products__grid-container {
     grid-template-columns: 370px 370px 370px;
@@ -208,8 +226,68 @@
     margin-top: 303px;
   }
   .products__card {
-    min-width: 370px;
+    border-radius: 24px;
+    width: 370px;
     height: 536px;
     padding: 165px 64px 60px 64px;
+    &::before {
+      width: 302px;
+      height: 302px;
+      top: -167px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      top: -183px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &:nth-child(1) {
+      background: #aec6a5;
+      &::before {
+        background: linear-gradient(
+            0deg,
+            rgba(156, 190, 143, 0.7) 0%,
+            rgba(156, 190, 143, 0.7) 100%
+          ),
+          #d9d9d9;
+        filter: drop-shadow(0px 5.342px 20.033px rgba(10, 136, 23, 0.25));
+      }
+      &::after {
+        content: url('../images/products_ice-cream302x302.png');
+      }
+    }
+    &:nth-child(2) {
+      background: #efd478;
+      &::before {
+        background: linear-gradient(
+            0deg,
+            rgba(248, 210, 78, 0.7) 0%,
+            rgba(248, 210, 78, 0.7) 100%
+          ),
+          #d9d9d9;
+        filter: drop-shadow(0px 5.404px 20.265px rgba(153, 114, 23, 0.25));
+      }
+      &::after {
+        content: url('../images/products_ice-coffee302x302.png');
+      }
+    }
+    &:nth-child(3) {
+      background: #d6936d;
+      &::before {
+        background: linear-gradient(
+            0deg,
+            rgba(213, 117, 63, 0.7) 0%,
+            rgba(213, 117, 63, 0.7) 100%
+          ),
+          #d9d9d9;
+        filter: drop-shadow(0px 5.413px 20.3px rgba(0, 0, 0, 0.25));
+      }
+      &::after {
+        content: url('../images/products_milkshakes302x302.png');
+      }
+    }
   }
 }

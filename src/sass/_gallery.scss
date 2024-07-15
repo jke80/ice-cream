@@ -1,5 +1,5 @@
 .sections {
-  background-image: url(../images/products_background_mobile.jpg);
+  background-image: url(../images/sections_background_mobile.jpg);
   background-repeat: no-repeat;
   background-position: top 32px center;
 }
@@ -48,13 +48,21 @@ picture .gallery__img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .sections {
-    background-image: url(../images/products_background_mobile@2x.jpg);
+    background-image: url(../images/sections_background_mobile@2x.jpg);
   }
 }
 @media screen and (min-width: 480px) {
   .sections {
     max-width: 480px;
     background-position: top 49px center;
+    background-image: url(../images/sections_background_480.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      .sections {
+        background-image: url(../images/sections_background_480@2x.jpg);
+      }
+    }
   }
   .gallery {
     height: 204px;
@@ -66,7 +74,7 @@ picture .gallery__img {
     background-position: top 144px center;
     max-width: 768px;
 
-    background-image: url(../images/products_background_tablet.jpg);
+    background-image: url(../images/sections_background_tablet.jpg);
   }
   .gallery {
     height: 327px;
@@ -78,7 +86,7 @@ picture .gallery__img {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .sections {
-      background-image: url(../images/products_background_tablet@2x.jpg);
+      background-image: url(../images/sections_background_tablet@2x.jpg);
     }
   }
 }
@@ -86,7 +94,7 @@ picture .gallery__img {
   .sections {
     max-width: 1200px;
     background-position: top 98px center;
-    background-image: url(../images/products_background_desktop.jpg);
+    background-image: url(../images/sections_background_desktop.jpg);
   }
   .gallery {
     height: 422px;
@@ -98,7 +106,7 @@ picture .gallery__img {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .sections {
-      background-image: url(../images/products_background_desktop@2x.jpg);
+      background-image: url(../images/sections_background_desktop@2x.jpg);
     }
   }
 }
